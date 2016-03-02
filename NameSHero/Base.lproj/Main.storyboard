@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1NQ-Rh-6kv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NameSHero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainScreenViewController" customModule="NameSHero" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="Fvi-rN-epI" userLabel="Image View - background">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVB-Jz-mN3">
-                                <rect key="frame" x="273" y="279" width="54" height="42"/>
+                                <rect key="frame" x="160" y="312" width="54" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="RBe-Cy-bFZ" kind="show" id="uGe-wj-8f8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iX-tD-96f">
-                                <rect key="frame" x="261.5" y="340" width="78.5" height="20.5"/>
+                                <rect key="frame" x="149" y="373" width="78.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,13 +48,107 @@
                             <constraint firstItem="XVB-Jz-mN3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zGd-Vq-9ln"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oVz-Rk-Zba"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="354"/>
+            <point key="canvasLocation" x="1130.5" y="-154.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ih8-WA-hNP">
+            <objects>
+                <viewController id="RBe-Cy-bFZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zt6-nB-zi3"/>
+                        <viewControllerLayoutGuide type="bottom" id="2sa-SL-90m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MIc-3l-vPU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
+                                <rect key="frame" x="56" y="143.5" width="263" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="263" id="NKh-V2-2zC"/>
+                                    <constraint firstAttribute="height" constant="216" id="UYm-Te-fH1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-Uk-yVh">
+                                <rect key="frame" x="94" y="392.5" width="187" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-cv-el2">
+                                <rect key="frame" x="299.5" y="72" width="59.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp">
+                                <rect key="frame" x="148" y="441" width="78" height="30"/>
+                                <state key="normal" title="Spider Man"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2">
+                                <rect key="frame" x="162" y="501" width="50" height="30"/>
+                                <state key="normal" title=" X-Man"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej">
+                                <rect key="frame" x="171" y="560" width="33" height="30"/>
+                                <state key="normal" title="Thor"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er">
+                                <rect key="frame" x="170" y="624" width="35" height="30"/>
+                                <state key="normal" title=" Hulk"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CQn-cv-el2" firstAttribute="trailing" secondItem="MIc-3l-vPU" secondAttribute="trailingMargin" id="18O-FK-T8h"/>
+                            <constraint firstItem="HdR-Uk-yVh" firstAttribute="top" secondItem="xoS-Mb-Jyr" secondAttribute="bottom" constant="33" id="3M2-FC-cA7"/>
+                            <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" constant="30" id="5un-TN-uVR"/>
+                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="B8a-OK-IpR"/>
+                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="28" id="F49-1R-NPP"/>
+                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Gjp-lf-d0H"/>
+                            <constraint firstItem="CKc-bc-YU2" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="QQy-H8-0ME"/>
+                            <constraint firstItem="HdR-Uk-yVh" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Rof-6v-Pi6"/>
+                            <constraint firstItem="kEz-wG-Dej" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Ugz-VZ-0mN"/>
+                            <constraint firstItem="xoS-Mb-Jyr" firstAttribute="top" secondItem="CQn-cv-el2" secondAttribute="bottom" constant="51" id="Zg4-kD-reL"/>
+                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="kEz-wG-Dej" secondAttribute="bottom" constant="34" id="aoV-vk-ne7"/>
+                            <constraint firstItem="xoS-Mb-Jyr" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="b12-yK-W3h"/>
+                            <constraint firstItem="CQn-cv-el2" firstAttribute="top" secondItem="zt6-nB-zi3" secondAttribute="bottom" constant="8" id="jrj-Y4-SBB"/>
+                            <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" constant="29" id="tKM-fa-fCW"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMl-Gb-RGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730.5" y="-154.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hPj-a3-qu6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1NQ-Rh-6kv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHW-dd-C1V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8ar-dg-gwX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beG-iK-Z6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.5" y="-154.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="Main-screen-background" width="1177" height="859"/>
+        <image name="Spider-Man" width="135" height="135"/>
     </resources>
 </document>

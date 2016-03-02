@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		044D532F1C8678400053E416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D532E1C8678400053E416 /* AppDelegate.swift */; };
-		044D53311C8678400053E416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53301C8678400053E416 /* ViewController.swift */; };
+		044D53311C8678400053E416 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53301C8678400053E416 /* MainScreenViewController.swift */; };
 		044D53341C8678400053E416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D53321C8678400053E416 /* Main.storyboard */; };
 		044D53361C8678400053E416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044D53351C8678400053E416 /* Assets.xcassets */; };
 		044D53391C8678400053E416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D53371C8678400053E416 /* LaunchScreen.storyboard */; };
+		044D53411C8786670053E416 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53401C8786670053E416 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		044D532B1C8678400053E416 /* NameSHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameSHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044D532E1C8678400053E416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		044D53301C8678400053E416 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		044D53301C8678400053E416 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		044D53331C8678400053E416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044D53351C8678400053E416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044D53381C8678400053E416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044D533A1C8678400053E416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044D53401C8786670053E416 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				044D532E1C8678400053E416 /* AppDelegate.swift */,
-				044D53301C8678400053E416 /* ViewController.swift */,
+				044D53301C8678400053E416 /* MainScreenViewController.swift */,
+				044D53401C8786670053E416 /* QuizViewController.swift */,
 				044D53321C8678400053E416 /* Main.storyboard */,
 				044D53351C8678400053E416 /* Assets.xcassets */,
 				044D53371C8678400053E416 /* LaunchScreen.storyboard */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044D53311C8678400053E416 /* ViewController.swift in Sources */,
+				044D53411C8786670053E416 /* QuizViewController.swift in Sources */,
+				044D53311C8678400053E416 /* MainScreenViewController.swift in Sources */,
 				044D532F1C8678400053E416 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
