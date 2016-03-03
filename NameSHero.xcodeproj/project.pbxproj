@@ -13,6 +13,10 @@
 		044D53361C8678400053E416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044D53351C8678400053E416 /* Assets.xcassets */; };
 		044D53391C8678400053E416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D53371C8678400053E416 /* LaunchScreen.storyboard */; };
 		044D53411C8786670053E416 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53401C8786670053E416 /* QuizViewController.swift */; };
+		044D53441C87D4310053E416 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D53431C87D4310053E416 /* ReactiveCocoa.framework */; };
+		044D53461C87D4390053E416 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D53451C87D4390053E416 /* Result.framework */; };
+		044D534B1C87D7BD0053E416 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D534A1C87D7BD0053E416 /* QuizViewModel.swift */; };
+		044D534D1C87E1F40053E416 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D534C1C87E1F40053E416 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		044D53381C8678400053E416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044D533A1C8678400053E416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044D53401C8786670053E416 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		044D53431C87D4310053E416 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		044D53451C87D4390053E416 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		044D534A1C87D7BD0053E416 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		044D534C1C87E1F40053E416 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044D53441C87D4310053E416 /* ReactiveCocoa.framework in Frameworks */,
+				044D53461C87D4390053E416 /* Result.framework in Frameworks */,
+				044D534D1C87E1F40053E416 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,7 @@
 			children = (
 				044D532D1C8678400053E416 /* NameSHero */,
 				044D532C1C8678400053E416 /* Products */,
+				044D53471C87D47C0053E416 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +71,31 @@
 				044D532E1C8678400053E416 /* AppDelegate.swift */,
 				044D53301C8678400053E416 /* MainScreenViewController.swift */,
 				044D53401C8786670053E416 /* QuizViewController.swift */,
+				044D53491C87D78C0053E416 /* ViewModel */,
 				044D53321C8678400053E416 /* Main.storyboard */,
 				044D53351C8678400053E416 /* Assets.xcassets */,
 				044D53371C8678400053E416 /* LaunchScreen.storyboard */,
 				044D533A1C8678400053E416 /* Info.plist */,
 			);
 			path = NameSHero;
+			sourceTree = "<group>";
+		};
+		044D53471C87D47C0053E416 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				044D534C1C87E1F40053E416 /* Alamofire.framework */,
+				044D53451C87D4390053E416 /* Result.framework */,
+				044D53431C87D4310053E416 /* ReactiveCocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		044D53491C87D78C0053E416 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				044D534A1C87D7BD0053E416 /* QuizViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +108,7 @@
 				044D53271C8678400053E416 /* Sources */,
 				044D53281C8678400053E416 /* Frameworks */,
 				044D53291C8678400053E416 /* Resources */,
+				044D53421C87D3B30053E416 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,6 +165,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		044D53421C87D3B30053E416 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		044D53271C8678400053E416 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +192,7 @@
 				044D53411C8786670053E416 /* QuizViewController.swift in Sources */,
 				044D53311C8678400053E416 /* MainScreenViewController.swift in Sources */,
 				044D532F1C8678400053E416 /* AppDelegate.swift in Sources */,
+				044D534B1C87D7BD0053E416 /* QuizViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +305,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NameSHero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -265,6 +321,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NameSHero/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -292,6 +352,7 @@
 				044D533F1C8678410053E416 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
