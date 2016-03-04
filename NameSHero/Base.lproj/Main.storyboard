@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1130.5" y="-154.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="ih8-WA-hNP">
             <objects>
-                <viewController id="RBe-Cy-bFZ" sceneMemberID="viewController">
+                <viewController id="RBe-Cy-bFZ" customClass="QuizViewController" customModule="NameSHero" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zt6-nB-zi3"/>
                         <viewControllerLayoutGuide type="bottom" id="2sa-SL-90m"/>
@@ -122,6 +122,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pictureImageView" destination="xoS-Mb-Jyr" id="pji-DR-sDv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMl-Gb-RGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
