@@ -26,11 +26,19 @@ class QuizViewModel {
   var questHero: Hero?
   let pictureURL: MutableProperty<NSURL?>
   let choices: MutableProperty<[String]?>
+  let numberOfQuests: MutableProperty<Int>
 
 
   init() {
     pictureURL = MutableProperty<NSURL?>(nil)
     choices = MutableProperty<[String]?>(nil)
+    numberOfQuests = MutableProperty<Int>(0)
+
+    numberOfQuests.producer.startWithNext {
+      if 0 < $0 && $0 <= 50 {
+        self.generateQuest()
+      }
+    }
   }
 
   func fetchCharacterPicture() {
@@ -44,7 +52,7 @@ class QuizViewModel {
       ["apikey": Constants.MarvelAPIPublicKey,
           "ts" : ts,
         "hash" : hash,
-        "limit": 5])
+        "limit": 20])
       .responseJSON { response in
         //print(response.request)  // original URL request
         //print(response.response) // URL response
@@ -69,8 +77,17 @@ class QuizViewModel {
           self.heroes.append(Hero(id: character["id"] as! Int, name: character["name"] as! String, pictureURL: imageURL))
         }
         print(self.heroes)
-        self.generateQuest()
+        self.numberOfQuests.value++
       }
+  }
+
+  func checkAnswer(userAnswer: String?) {
+    if questHero?.name == userAnswer {
+      print("Bingo")
+      self.numberOfQuests.value++
+    } else {
+      print("Game Over")
+    }
   }
 
   private func generateQuest() {

@@ -89,18 +89,30 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp">
                                 <rect key="frame" x="16" y="441" width="343" height="30"/>
                                 <state key="normal" title="Spider Man"/>
+                                <connections>
+                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="dng-SZ-Zsv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2">
                                 <rect key="frame" x="16" y="501" width="343" height="30"/>
                                 <state key="normal" title=" X-Man"/>
+                                <connections>
+                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="MTD-cA-gR5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej">
                                 <rect key="frame" x="16" y="560" width="343" height="30"/>
                                 <state key="normal" title="Thor"/>
+                                <connections>
+                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="p5X-Qa-6Ao"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er">
                                 <rect key="frame" x="16" y="624" width="343" height="30"/>
                                 <state key="normal" title=" Hulk"/>
+                                <connections>
+                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="LtN-qV-sOm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,6 +168,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="pictureImageView" destination="xoS-Mb-Jyr" id="pji-DR-sDv"/>
+                        <outlet property="scoreLabel" destination="CQn-cv-el2" id="DbQ-3t-L7e"/>
                         <outletCollection property="choiceButtons" destination="hNg-YZ-hRp" collectionClass="NSMutableArray" id="PdW-RH-tKY"/>
                         <outletCollection property="choiceButtons" destination="CKc-bc-YU2" collectionClass="NSMutableArray" id="AQ9-bc-0ef"/>
                         <outletCollection property="choiceButtons" destination="kEz-wG-Dej" collectionClass="NSMutableArray" id="BbO-ZX-V9D"/>
