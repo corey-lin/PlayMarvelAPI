@@ -72,9 +72,11 @@ class QuizViewModel {
           print(character["name"])
           print(character["id"])
           var imageURL: String = thumbnail["path"] as! String
-          imageURL += "/standard_fantastic.jpg"
-          print(imageURL)
-          self.heroes.append(Hero(id: character["id"] as! Int, name: character["name"] as! String, pictureURL: imageURL))
+          if imageURL.containsString("image_not_available") == false {
+            imageURL += "/standard_fantastic.jpg"
+            print(imageURL)
+            self.heroes.append(Hero(id: character["id"] as! Int, name: character["name"] as! String, pictureURL: imageURL))
+          }
         }
         print(self.heroes)
         self.numberOfQuests.value++
