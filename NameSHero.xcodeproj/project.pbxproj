@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040A01821C8ACBE3006DEC0F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A01811C8ACBE3006DEC0F /* ResultViewController.swift */; };
+		040A01841C8ACFB6006DEC0F /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A01831C8ACFB6006DEC0F /* ResultViewModel.swift */; };
 		044D532F1C8678400053E416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D532E1C8678400053E416 /* AppDelegate.swift */; };
 		044D53311C8678400053E416 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53301C8678400053E416 /* MainScreenViewController.swift */; };
 		044D53341C8678400053E416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D53321C8678400053E416 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040A01811C8ACBE3006DEC0F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		040A01831C8ACFB6006DEC0F /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		044D532B1C8678400053E416 /* NameSHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameSHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044D532E1C8678400053E416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044D53301C8678400053E416 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				044D534E1C890AE90053E416 /* Constants.swift */,
 				044D53301C8678400053E416 /* MainScreenViewController.swift */,
 				044D53401C8786670053E416 /* QuizViewController.swift */,
+				040A01811C8ACBE3006DEC0F /* ResultViewController.swift */,
 				044D53491C87D78C0053E416 /* ViewModel */,
 				044D53321C8678400053E416 /* Main.storyboard */,
 				044D53351C8678400053E416 /* Assets.xcassets */,
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				044D534A1C87D7BD0053E416 /* QuizViewModel.swift */,
+				040A01831C8ACFB6006DEC0F /* ResultViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 			files = (
 				044D53511C8916D70053E416 /* Swift-MD5.swift in Sources */,
 				044D534F1C890AE90053E416 /* Constants.swift in Sources */,
+				040A01821C8ACBE3006DEC0F /* ResultViewController.swift in Sources */,
+				040A01841C8ACFB6006DEC0F /* ResultViewModel.swift in Sources */,
 				044D53411C8786670053E416 /* QuizViewController.swift in Sources */,
 				044D53311C8678400053E416 /* MainScreenViewController.swift in Sources */,
 				044D532F1C8678400053E416 /* AppDelegate.swift in Sources */,

@@ -32,12 +32,24 @@ class QuizViewController: UIViewController {
       }
     }
     viewModel.numberOfQuests.producer.startWithNext {
+      if $0 == 3 {
+        self.performSegueWithIdentifier("toResult", sender: nil)
+      }
       if $0 > 0 {
-        self.scoreLabel.text = "Score:\($0)"
+        let score = $0 - 1
+        self.scoreLabel.text = "Score:\(score)"
       }
     }
 
     viewModel.fetchCharacterPicture()
+  }
+
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "toResult" {
+      let resultVC = segue.destinationViewController as! ResultViewController
+      let vm = ResultViewModel(viewModel.numberOfQuests.value)
+      resultVC.bindViewModel(vm)
+    }
   }
 
   @IBAction func selectButtonPressed(sender: AnyObject) {

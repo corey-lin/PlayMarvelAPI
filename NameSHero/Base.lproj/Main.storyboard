@@ -173,11 +173,76 @@
                         <outletCollection property="choiceButtons" destination="CKc-bc-YU2" collectionClass="NSMutableArray" id="AQ9-bc-0ef"/>
                         <outletCollection property="choiceButtons" destination="kEz-wG-Dej" collectionClass="NSMutableArray" id="BbO-ZX-V9D"/>
                         <outletCollection property="choiceButtons" destination="3Zc-ch-1Er" collectionClass="NSMutableArray" id="qW6-mt-Sxc"/>
+                        <segue destination="4iP-AU-BBx" kind="show" identifier="toResult" id="aAz-vK-9xZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMl-Gb-RGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730.5" y="-154.5"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="ub5-1q-el0">
+            <objects>
+                <viewController id="4iP-AU-BBx" customClass="ResultViewController" customModule="NameSHero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sm3-vV-7gJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="FEi-8K-2fl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dil-Sn-wHP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Final Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-mV-CGS">
+                                <rect key="frame" x="113" y="173" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play again?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c28-HC-rZQ">
+                                <rect key="frame" x="144" y="323" width="86" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUi-oW-cRM">
+                                <rect key="frame" x="84" y="400" width="46" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Yes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1h-Gs-tDh">
+                                <rect key="frame" x="249" y="400" width="37" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="No"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-LG-iRo">
+                                <rect key="frame" x="138" y="224.5" width="98.5" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" red="0.89019607840000003" green="0.33333333329999998" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M30-LG-iRo" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="31" id="0c3-vt-2lY"/>
+                            <constraint firstItem="BUi-oW-cRM" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="207" id="3As-DX-XIt"/>
+                            <constraint firstItem="Wbd-mV-CGS" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="HoR-s5-zY9"/>
+                            <constraint firstItem="Wbd-mV-CGS" firstAttribute="top" secondItem="Sm3-vV-7gJ" secondAttribute="bottom" constant="109" id="NgY-eA-qqW"/>
+                            <constraint firstItem="c28-HC-rZQ" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" id="Rfe-K8-Ho1"/>
+                            <constraint firstItem="c28-HC-rZQ" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="TbB-1V-lpW"/>
+                            <constraint firstItem="a1h-Gs-tDh" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" constant="80" id="VAr-qS-4KF"/>
+                            <constraint firstItem="a1h-Gs-tDh" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="207" id="XgE-GW-gaW"/>
+                            <constraint firstItem="M30-LG-iRo" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="dwl-5l-eur"/>
+                            <constraint firstItem="BUi-oW-cRM" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" constant="-80" id="nAa-pY-RQf"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="finalScoreLabel" destination="M30-LG-iRo" id="OaM-e3-bDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLE-6F-cGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2196.5" y="-154.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hPj-a3-qu6">
