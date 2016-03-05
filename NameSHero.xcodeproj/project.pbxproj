@@ -19,6 +19,7 @@
 		044D534D1C87E1F40053E416 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D534C1C87E1F40053E416 /* Alamofire.framework */; };
 		044D534F1C890AE90053E416 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D534E1C890AE90053E416 /* Constants.swift */; };
 		044D53511C8916D70053E416 /* Swift-MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53501C8916D70053E416 /* Swift-MD5.swift */; };
+		044D53551C8977E00053E416 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D53541C8977E00053E416 /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		044D534E1C890AE90053E416 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		044D53501C8916D70053E416 /* Swift-MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift-MD5.swift"; sourceTree = "<group>"; };
 		044D53531C89175F0053E416 /* NameSHero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NameSHero-Bridging-Header.h"; sourceTree = "<group>"; };
+		044D53541C8977E00053E416 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 				044D53441C87D4310053E416 /* ReactiveCocoa.framework in Frameworks */,
 				044D53461C87D4390053E416 /* Result.framework in Frameworks */,
 				044D534D1C87E1F40053E416 /* Alamofire.framework in Frameworks */,
+				044D53551C8977E00053E416 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +76,7 @@
 		044D532D1C8678400053E416 /* NameSHero */ = {
 			isa = PBXGroup;
 			children = (
-				044D53521C8916E10053E416 /* Extensions */,
+				044D53521C8916E10053E416 /* Util */,
 				044D532E1C8678400053E416 /* AppDelegate.swift */,
 				044D534E1C890AE90053E416 /* Constants.swift */,
 				044D53301C8678400053E416 /* MainScreenViewController.swift */,
@@ -91,6 +94,7 @@
 		044D53471C87D47C0053E416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				044D53541C8977E00053E416 /* Kingfisher.framework */,
 				044D534C1C87E1F40053E416 /* Alamofire.framework */,
 				044D53451C87D4390053E416 /* Result.framework */,
 				044D53431C87D4310053E416 /* ReactiveCocoa.framework */,
@@ -106,12 +110,12 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
-		044D53521C8916E10053E416 /* Extensions */ = {
+		044D53521C8916E10053E416 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				044D53501C8916D70053E416 /* Swift-MD5.swift */,
 			);
-			name = Extensions;
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +195,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 			);

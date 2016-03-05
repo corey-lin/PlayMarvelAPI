@@ -23,6 +23,7 @@ extension String {
     }
 
     result.destroy()
+    result.dealloc(digestLen)
 
     return String(format: hash as String)
   }
