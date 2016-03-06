@@ -15,6 +15,8 @@ class MainScreenViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController?.navigationBarHidden = true;
+  }
+  override func viewWillAppear(animated: Bool) {
     let recordScore = NSUserDefaults.standardUserDefaults().integerForKey(Constants.RecordScoreKey)
     recordScoreLabel.text = "Best score : \(recordScore)"
   }

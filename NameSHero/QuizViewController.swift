@@ -32,12 +32,14 @@ class QuizViewController: UIViewController {
       }
     }
     viewModel.numberOfQuests.producer.startWithNext {
-      if $0 == 3 {
-        self.performSegueWithIdentifier("toResult", sender: nil)
-      }
       if $0 > 0 {
         let score = $0 - 1
         self.scoreLabel.text = "Score:\(score)"
+      }
+    }
+    viewModel.quizViewStateInfo.producer.startWithNext {
+      if $0.curState == QuizViewState.GameOver {
+        self.performSegueWithIdentifier("toResult", sender: nil)
       }
     }
   }
