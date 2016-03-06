@@ -70,107 +70,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
-                                <rect key="frame" x="56" y="143" width="263" height="216"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZJ-Xq-tIH" userLabel="QuizView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
+                                        <rect key="frame" x="56" y="115" width="263" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="263" id="NKh-V2-2zC"/>
+                                            <constraint firstAttribute="height" constant="216" id="UYm-Te-fH1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-Uk-yVh">
+                                        <rect key="frame" x="94" y="367" width="187" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-cv-el2">
+                                        <rect key="frame" x="307" y="75" width="59.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp">
+                                        <rect key="frame" x="148" y="422" width="78" height="30"/>
+                                        <state key="normal" title="Spider Man"/>
+                                        <connections>
+                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="dng-SZ-Zsv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2">
+                                        <rect key="frame" x="162" y="477" width="50" height="30"/>
+                                        <state key="normal" title=" X-Man"/>
+                                        <connections>
+                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="MTD-cA-gR5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er">
+                                        <rect key="frame" x="170" y="588" width="35" height="30"/>
+                                        <state key="normal" title=" Hulk"/>
+                                        <connections>
+                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="LtN-qV-sOm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej">
+                                        <rect key="frame" x="171" y="535" width="33" height="30"/>
+                                        <state key="normal" title="Thor"/>
+                                        <connections>
+                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="p5X-Qa-6Ao"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="263" id="NKh-V2-2zC"/>
-                                    <constraint firstAttribute="height" constant="216" id="UYm-Te-fH1"/>
+                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" constant="28" id="1DV-eq-i8C"/>
+                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" constant="25" id="GQj-4G-dvU"/>
+                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="HGg-Yd-aub"/>
+                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="IxE-Jy-db5"/>
+                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="34.5" id="KTS-RV-CmD"/>
+                                    <constraint firstItem="CQn-cv-el2" firstAttribute="top" secondItem="8ZJ-Xq-tIH" secondAttribute="top" constant="75" id="OS4-y7-hYC"/>
+                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="PjE-IH-tcC"/>
+                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="QZF-Tm-X9i"/>
+                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="kEz-wG-Dej" secondAttribute="bottom" constant="23" id="XRu-wD-HV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="CQn-cv-el2" secondAttribute="trailing" constant="8.5" id="aAU-cz-O0G"/>
+                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="top" secondItem="CQn-cv-el2" secondAttribute="bottom" constant="20" id="bbJ-u6-HtF"/>
+                                    <constraint firstItem="HdR-Uk-yVh" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="hiM-kM-UOW"/>
+                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="pWi-2d-Pgo"/>
+                                    <constraint firstItem="HdR-Uk-yVh" firstAttribute="top" secondItem="xoS-Mb-Jyr" secondAttribute="bottom" constant="35.5" id="wuV-BU-rx1"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-Uk-yVh">
-                                <rect key="frame" x="94" y="392" width="187" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-cv-el2">
-                                <rect key="frame" x="299" y="72" width="59.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp">
-                                <rect key="frame" x="148" y="441" width="78" height="30"/>
-                                <state key="normal" title="Spider Man"/>
-                                <connections>
-                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="dng-SZ-Zsv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2">
-                                <rect key="frame" x="162" y="501" width="50" height="30"/>
-                                <state key="normal" title=" X-Man"/>
-                                <connections>
-                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="MTD-cA-gR5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej">
-                                <rect key="frame" x="171" y="560" width="33" height="30"/>
-                                <state key="normal" title="Thor"/>
-                                <connections>
-                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="p5X-Qa-6Ao"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er">
-                                <rect key="frame" x="170" y="624" width="35" height="30"/>
-                                <state key="normal" title=" Hulk"/>
-                                <connections>
-                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="LtN-qV-sOm"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CQn-cv-el2" firstAttribute="trailing" secondItem="MIc-3l-vPU" secondAttribute="trailingMargin" id="18O-FK-T8h"/>
-                            <constraint firstItem="HdR-Uk-yVh" firstAttribute="top" secondItem="xoS-Mb-Jyr" secondAttribute="bottom" constant="33" id="3M2-FC-cA7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kEz-wG-Dej" secondAttribute="trailing" id="3n6-Mv-V5N"/>
-                            <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" constant="30" id="5un-TN-uVR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hNg-YZ-hRp" secondAttribute="trailing" id="7Gw-ni-PIX"/>
-                            <constraint firstItem="CKc-bc-YU2" firstAttribute="leading" secondItem="MIc-3l-vPU" secondAttribute="leadingMargin" id="8hp-PO-pZL"/>
-                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="9Pu-9t-iol"/>
-                            <constraint firstItem="kEz-wG-Dej" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Af5-4x-HxD"/>
-                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="B8a-OK-IpR"/>
-                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="28" id="F49-1R-NPP"/>
-                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Gjp-lf-d0H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hNg-YZ-hRp" secondAttribute="trailing" id="N1q-OK-RhM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CKc-bc-YU2" secondAttribute="trailing" id="Pnl-eo-qEe"/>
-                            <constraint firstItem="CKc-bc-YU2" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="QQy-H8-0ME"/>
-                            <constraint firstItem="HdR-Uk-yVh" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Rof-6v-Pi6"/>
-                            <constraint firstItem="kEz-wG-Dej" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Ugz-VZ-0mN"/>
-                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="V1a-Oh-v6C"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Zc-ch-1Er" secondAttribute="trailing" id="Vss-8O-Vpm"/>
-                            <constraint firstItem="CKc-bc-YU2" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="Wjc-Br-A76"/>
-                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="leading" secondItem="MIc-3l-vPU" secondAttribute="leadingMargin" id="ZYm-JP-fpP"/>
-                            <constraint firstItem="xoS-Mb-Jyr" firstAttribute="top" secondItem="CQn-cv-el2" secondAttribute="bottom" constant="51" id="Zg4-kD-reL"/>
-                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="kEz-wG-Dej" secondAttribute="bottom" constant="34" id="aoV-vk-ne7"/>
-                            <constraint firstItem="xoS-Mb-Jyr" firstAttribute="centerX" secondItem="MIc-3l-vPU" secondAttribute="centerX" id="b12-yK-W3h"/>
-                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="leading" secondItem="MIc-3l-vPU" secondAttribute="leadingMargin" id="gyD-yF-BP0"/>
-                            <constraint firstItem="CQn-cv-el2" firstAttribute="top" secondItem="zt6-nB-zi3" secondAttribute="bottom" constant="8" id="jrj-Y4-SBB"/>
-                            <constraint firstItem="kEz-wG-Dej" firstAttribute="leading" secondItem="MIc-3l-vPU" secondAttribute="leadingMargin" id="qDl-WG-9H8"/>
-                            <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" constant="29" id="tKM-fa-fCW"/>
-                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="leading" secondItem="MIc-3l-vPU" secondAttribute="leadingMargin" id="umb-g7-c4n"/>
+                            <constraint firstAttribute="trailing" secondItem="8ZJ-Xq-tIH" secondAttribute="trailing" id="3vO-S4-L51"/>
+                            <constraint firstItem="8ZJ-Xq-tIH" firstAttribute="leading" secondItem="MIc-3l-vPU" secondAttribute="leading" id="ThA-69-Jhx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8ZJ-Xq-tIH" secondAttribute="bottom" id="r0Z-tX-apf"/>
+                            <constraint firstItem="8ZJ-Xq-tIH" firstAttribute="top" secondItem="MIc-3l-vPU" secondAttribute="topMargin" id="t0D-wT-J3X"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="7Gw-ni-PIX"/>
-                                <exclude reference="Gjp-lf-d0H"/>
-                                <exclude reference="N1q-OK-RhM"/>
-                                <exclude reference="ZYm-JP-fpP"/>
-                                <exclude reference="umb-g7-c4n"/>
-                                <exclude reference="8hp-PO-pZL"/>
-                                <exclude reference="Pnl-eo-qEe"/>
-                                <exclude reference="QQy-H8-0ME"/>
-                                <exclude reference="3n6-Mv-V5N"/>
-                                <exclude reference="Ugz-VZ-0mN"/>
-                                <exclude reference="qDl-WG-9H8"/>
-                                <exclude reference="B8a-OK-IpR"/>
-                                <exclude reference="Vss-8O-Vpm"/>
-                                <exclude reference="gyD-yF-BP0"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="pictureImageView" destination="xoS-Mb-Jyr" id="pji-DR-sDv"/>
+                        <outlet property="quizPlayView" destination="8ZJ-Xq-tIH" id="eCP-hO-qbc"/>
                         <outlet property="scoreLabel" destination="CQn-cv-el2" id="DbQ-3t-L7e"/>
                         <outletCollection property="choiceButtons" destination="hNg-YZ-hRp" collectionClass="NSMutableArray" id="PdW-RH-tKY"/>
                         <outletCollection property="choiceButtons" destination="CKc-bc-YU2" collectionClass="NSMutableArray" id="AQ9-bc-0ef"/>

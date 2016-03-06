@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040A01821C8ACBE3006DEC0F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A01811C8ACBE3006DEC0F /* ResultViewController.swift */; };
 		040A01841C8ACFB6006DEC0F /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A01831C8ACFB6006DEC0F /* ResultViewModel.swift */; };
+		040A01861C8CE3A4006DEC0F /* SwiftSpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040A01851C8CE3A4006DEC0F /* SwiftSpinner.framework */; };
 		044D532F1C8678400053E416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D532E1C8678400053E416 /* AppDelegate.swift */; };
 		044D53311C8678400053E416 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53301C8678400053E416 /* MainScreenViewController.swift */; };
 		044D53341C8678400053E416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D53321C8678400053E416 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		040A01811C8ACBE3006DEC0F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		040A01831C8ACFB6006DEC0F /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		040A01851C8CE3A4006DEC0F /* SwiftSpinner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSpinner.framework; path = Carthage/Build/iOS/SwiftSpinner.framework; sourceTree = "<group>"; };
 		044D532B1C8678400053E416 /* NameSHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameSHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044D532E1C8678400053E416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044D53301C8678400053E416 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040A01861C8CE3A4006DEC0F /* SwiftSpinner.framework in Frameworks */,
 				044D53441C87D4310053E416 /* ReactiveCocoa.framework in Frameworks */,
 				044D53461C87D4390053E416 /* Result.framework in Frameworks */,
 				044D534D1C87E1F40053E416 /* Alamofire.framework in Frameworks */,
@@ -99,6 +102,7 @@
 		044D53471C87D47C0053E416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				040A01851C8CE3A4006DEC0F /* SwiftSpinner.framework */,
 				044D53541C8977E00053E416 /* Kingfisher.framework */,
 				044D534C1C87E1F40053E416 /* Alamofire.framework */,
 				044D53451C87D4390053E416 /* Result.framework */,
@@ -202,6 +206,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftSpinner.framework",
 			);
 			outputPaths = (
 			);

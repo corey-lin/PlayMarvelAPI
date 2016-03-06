@@ -8,11 +8,14 @@
 import UIKit
 //import ReactiveCocoa
 import Kingfisher
+import SwiftSpinner
 
 class QuizViewController: UIViewController {
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var pictureImageView: UIImageView!
   @IBOutlet var choiceButtons: [UIButton]!
+  @IBOutlet weak var quizPlayView: UIView!
+
   var viewModel = QuizViewModel()
 
   override func viewDidLoad() {
@@ -40,6 +43,12 @@ class QuizViewController: UIViewController {
     viewModel.quizViewStateInfo.producer.startWithNext {
       if $0.curState == QuizViewState.GameOver {
         self.performSegueWithIdentifier("toResult", sender: nil)
+      } else if $0.curState == QuizViewState.Loading {
+        SwiftSpinner.show("Loading Data From Server...")
+        self.quizPlayView.hidden = true
+      } else if $0.curState == QuizViewState.UserPlay {
+        SwiftSpinner.hide()
+        self.quizPlayView.hidden = false
       }
     }
   }

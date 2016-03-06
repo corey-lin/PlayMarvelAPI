@@ -1,3 +1,5 @@
 github "ReactiveCocoa/ReactiveCocoa" == 4.0.1
 github "Alamofire/Alamofire" ~> 3.0
 github "onevcat/Kingfisher" ~> 2.0
+github "dwoodgate/SwiftSpinner" "87ed6bbe7e220c32f68eb884afd99370ef6e4a11"
+
