@@ -16,6 +16,10 @@ class ResultViewController: UIViewController {
     viewModel.finalScore.producer.startWithNext {
       score in
       self.finalScoreLabel.text = "\(score)"
+      let recordScore: Int = NSUserDefaults.standardUserDefaults().integerForKey(Constants.RecordScoreKey)
+      if recordScore < score {
+        NSUserDefaults.standardUserDefaults().setInteger(score, forKey: Constants.RecordScoreKey)
+      }
     }
   }
 

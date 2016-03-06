@@ -10,10 +10,13 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
 
+  @IBOutlet weak var recordScoreLabel: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController?.navigationBarHidden = true;
+    let recordScore = NSUserDefaults.standardUserDefaults().integerForKey(Constants.RecordScoreKey)
+    recordScoreLabel.text = "Best score : \(recordScore)"
   }
 
   override func didReceiveMemoryWarning() {
