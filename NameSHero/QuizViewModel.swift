@@ -79,8 +79,13 @@ class QuizViewModel {
           }
         }
         print(self.heroes)
-        self.numberOfQuests.value++
+        self.numberOfQuests.value = 1;
       }
+  }
+
+  func resetQuiz() {
+    heroes = [Hero]()
+    //numberOfQuests.value = 0
   }
 
   func checkAnswer(userAnswer: String?) {

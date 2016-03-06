@@ -211,11 +211,17 @@
                                 <rect key="frame" x="84" y="400" width="46" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Yes"/>
+                                <connections>
+                                    <action selector="backToQuizScreen:" destination="4iP-AU-BBx" eventType="touchUpInside" id="6jH-Gd-aLh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1h-Gs-tDh">
                                 <rect key="frame" x="249" y="400" width="37" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="No"/>
+                                <connections>
+                                    <action selector="backToMainScreen:" destination="4iP-AU-BBx" eventType="touchUpInside" id="fe9-1p-3V5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-LG-iRo">
                                 <rect key="frame" x="138" y="224.5" width="98.5" height="49"/>

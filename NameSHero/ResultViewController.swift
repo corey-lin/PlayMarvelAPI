@@ -23,6 +23,14 @@ class ResultViewController: UIViewController {
     }
   }
 
+  @IBAction func backToMainScreen(sender: AnyObject) {
+    self.navigationController?.popToRootViewControllerAnimated(true)
+  }
+
+  @IBAction func backToQuizScreen(sender: AnyObject) {
+    self.navigationController?.popViewControllerAnimated(true)
+  }
+
   func bindViewModel(vm: ResultViewModel!) {
     viewModel = vm
   }

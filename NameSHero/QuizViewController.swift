@@ -40,7 +40,10 @@ class QuizViewController: UIViewController {
         self.scoreLabel.text = "Score:\(score)"
       }
     }
+  }
 
+  override func viewWillAppear(animated: Bool) {
+    viewModel.resetQuiz()
     viewModel.fetchCharacterPicture()
   }
 
