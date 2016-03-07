@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "454A35793129CB80BC04EB79DF95C60A30D255D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1957764D214508BB941C630A8AD8F15D89745C1B" : 0,
+    "454A35793129CB80BC04EB79DF95C60A30D255D6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9D51000-2C48-4E97-9D66-42376B467A6E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1957764D214508BB941C630A8AD8F15D89745C1B" : "NameSHero\/SwiftyButton\/",
+    "454A35793129CB80BC04EB79DF95C60A30D255D6" : "NameSHero\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NameSHero",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NameSHero.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TakeScoop\/SwiftyButton.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1957764D214508BB941C630A8AD8F15D89745C1B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/corey-lin\/PlayMarvelAPI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "454A35793129CB80BC04EB79DF95C60A30D255D6"
+    }
+  ]
+}

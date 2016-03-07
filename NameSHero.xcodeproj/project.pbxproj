@@ -23,6 +23,7 @@
 		044D534F1C890AE90053E416 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D534E1C890AE90053E416 /* Constants.swift */; };
 		044D53511C8916D70053E416 /* Swift-MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53501C8916D70053E416 /* Swift-MD5.swift */; };
 		044D53551C8977E00053E416 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D53541C8977E00053E416 /* Kingfisher.framework */; };
+		9649F9956616BA66855E908C /* Pods_NameSHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8C2B44993FD35EBBDC436C /* Pods_NameSHero.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,9 @@
 		044D53501C8916D70053E416 /* Swift-MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift-MD5.swift"; sourceTree = "<group>"; };
 		044D53531C89175F0053E416 /* NameSHero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NameSHero-Bridging-Header.h"; sourceTree = "<group>"; };
 		044D53541C8977E00053E416 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		052E28B4C746344F9E4F92D1 /* Pods-NameSHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NameSHero.release.xcconfig"; path = "Pods/Target Support Files/Pods-NameSHero/Pods-NameSHero.release.xcconfig"; sourceTree = "<group>"; };
+		56A278C3F307D7A3EA74D09C /* Pods-NameSHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NameSHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NameSHero/Pods-NameSHero.debug.xcconfig"; sourceTree = "<group>"; };
+		BF8C2B44993FD35EBBDC436C /* Pods_NameSHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NameSHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 				044D53461C87D4390053E416 /* Result.framework in Frameworks */,
 				044D534D1C87E1F40053E416 /* Alamofire.framework in Frameworks */,
 				044D53551C8977E00053E416 /* Kingfisher.framework in Frameworks */,
+				9649F9956616BA66855E908C /* Pods_NameSHero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,7 @@
 				044D532D1C8678400053E416 /* NameSHero */,
 				044D532C1C8678400053E416 /* Products */,
 				044D53471C87D47C0053E416 /* Frameworks */,
+				DB522C7A19EBB68F14FB2995 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +113,7 @@
 				044D534C1C87E1F40053E416 /* Alamofire.framework */,
 				044D53451C87D4390053E416 /* Result.framework */,
 				044D53431C87D4310053E416 /* ReactiveCocoa.framework */,
+				BF8C2B44993FD35EBBDC436C /* Pods_NameSHero.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,6 +135,15 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		DB522C7A19EBB68F14FB2995 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56A278C3F307D7A3EA74D09C /* Pods-NameSHero.debug.xcconfig */,
+				052E28B4C746344F9E4F92D1 /* Pods-NameSHero.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +151,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044D533D1C8678410053E416 /* Build configuration list for PBXNativeTarget "NameSHero" */;
 			buildPhases = (
+				4CD95E29AF418A1273691610 /* Check Pods Manifest.lock */,
 				044D53271C8678400053E416 /* Sources */,
 				044D53281C8678400053E416 /* Frameworks */,
 				044D53291C8678400053E416 /* Resources */,
 				044D53421C87D3B30053E416 /* ShellScript */,
+				D4C9606BC48BD66D54EE022F /* Embed Pods Frameworks */,
+				592A348FC1A5BF54A60425DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +232,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		4CD95E29AF418A1273691610 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		592A348FC1A5BF54A60425DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NameSHero/Pods-NameSHero-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C9606BC48BD66D54EE022F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NameSHero/Pods-NameSHero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -339,6 +403,7 @@
 		};
 		044D533E1C8678410053E416 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56A278C3F307D7A3EA74D09C /* Pods-NameSHero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -356,6 +421,7 @@
 		};
 		044D533F1C8678410053E416 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052E28B4C746344F9E4F92D1 /* Pods-NameSHero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

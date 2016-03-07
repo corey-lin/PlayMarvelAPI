@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,10 +22,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="Fvi-rN-epI" userLabel="Image View - background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVB-Jz-mN3">
-                                <rect key="frame" x="160" y="312" width="54" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVB-Jz-mN3" customClass="SwiftyButton" customModule="SwiftyButton">
+                                <rect key="frame" x="110" y="313" width="155" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="ftr-eN-TSZ"/>
+                                    <constraint firstAttribute="height" constant="41" id="l1N-yu-pNI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Start"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="RBe-Cy-bFZ" kind="show" id="uGe-wj-8f8"/>
                                 </connections>
@@ -73,71 +83,171 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZJ-Xq-tIH" userLabel="QuizView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
-                                        <rect key="frame" x="56" y="115" width="263" height="216"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
+                                        <rect key="frame" x="40" y="56" width="295" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="263" id="NKh-V2-2zC"/>
+                                            <constraint firstAttribute="width" secondItem="xoS-Mb-Jyr" secondAttribute="height" multiplier="1:1" id="SPL-vU-cXc"/>
                                             <constraint firstAttribute="height" constant="216" id="UYm-Te-fH1"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NKh-V2-2zC"/>
+                                                <exclude reference="UYm-Te-fH1"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-Uk-yVh">
-                                        <rect key="frame" x="94" y="367" width="187" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-cv-el2">
-                                        <rect key="frame" x="307" y="75" width="59.5" height="20.5"/>
+                                        <rect key="frame" x="307" y="28" width="59.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp">
-                                        <rect key="frame" x="148" y="422" width="78" height="30"/>
-                                        <state key="normal" title="Spider Man"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp" customClass="SwiftyButton" customModule="SwiftyButton">
+                                        <rect key="frame" x="20" y="404" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="w4e-BF-i8D"/>
+                                        </constraints>
+                                        <state key="normal" title="Spider Man">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="1" green="0.12838443109650155" blue="0.35968872301169974" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="dng-SZ-Zsv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2">
-                                        <rect key="frame" x="162" y="477" width="50" height="30"/>
-                                        <state key="normal" title=" X-Man"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2" customClass="SwiftyButton" customModule="SwiftyButton">
+                                        <rect key="frame" x="20" y="467" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bfy-Wa-iTa"/>
+                                        </constraints>
+                                        <state key="normal" title=" X-Man">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="1" green="0.12838443109650155" blue="0.35968872301169974" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="MTD-cA-gR5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er">
-                                        <rect key="frame" x="170" y="588" width="35" height="30"/>
-                                        <state key="normal" title=" Hulk"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er" customClass="SwiftyButton" customModule="SwiftyButton">
+                                        <rect key="frame" x="20" y="593" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xr8-Yl-epn"/>
+                                        </constraints>
+                                        <state key="normal" title=" Hulk">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="1" green="0.12838443109650155" blue="0.35968872301169974" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="LtN-qV-sOm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej">
-                                        <rect key="frame" x="171" y="535" width="33" height="30"/>
-                                        <state key="normal" title="Thor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej" customClass="SwiftyButton" customModule="SwiftyButton">
+                                        <rect key="frame" x="20" y="527" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iek-Zg-P0T"/>
+                                        </constraints>
+                                        <state key="normal" title="Thor">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="1" green="0.12838443109650155" blue="0.35968872301169974" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="p5X-Qa-6Ao"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-Uk-yVh">
+                                        <rect key="frame" x="94" y="359" width="187" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" constant="28" id="1DV-eq-i8C"/>
-                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" constant="25" id="GQj-4G-dvU"/>
+                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" constant="20" id="1DV-eq-i8C"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Zc-ch-1Er" secondAttribute="trailing" constant="20" id="1xy-Vw-uBt"/>
+                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="2eA-iD-FVD"/>
+                                    <constraint firstAttribute="trailing" secondItem="CKc-bc-YU2" secondAttribute="trailing" constant="20" id="B67-9y-Qz2"/>
+                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" constant="23" id="GQj-4G-dvU"/>
                                     <constraint firstItem="kEz-wG-Dej" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="HGg-Yd-aub"/>
                                     <constraint firstItem="xoS-Mb-Jyr" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="IxE-Jy-db5"/>
-                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="34.5" id="KTS-RV-CmD"/>
-                                    <constraint firstItem="CQn-cv-el2" firstAttribute="top" secondItem="8ZJ-Xq-tIH" secondAttribute="top" constant="75" id="OS4-y7-hYC"/>
-                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="PjE-IH-tcC"/>
+                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="24.5" id="KTS-RV-CmD"/>
+                                    <constraint firstItem="CQn-cv-el2" firstAttribute="top" secondItem="8ZJ-Xq-tIH" secondAttribute="top" constant="28" id="OS4-y7-hYC"/>
                                     <constraint firstItem="3Zc-ch-1Er" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="QZF-Tm-X9i"/>
-                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="kEz-wG-Dej" secondAttribute="bottom" constant="23" id="XRu-wD-HV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNg-YZ-hRp" secondAttribute="trailing" constant="20" id="Qvk-Dh-KaV"/>
+                                    <constraint firstAttribute="trailing" secondItem="xoS-Mb-Jyr" secondAttribute="trailing" constant="40" id="XAf-UZ-vi9"/>
+                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="kEz-wG-Dej" secondAttribute="bottom" constant="26" id="XRu-wD-HV1"/>
                                     <constraint firstAttribute="trailing" secondItem="CQn-cv-el2" secondAttribute="trailing" constant="8.5" id="aAU-cz-O0G"/>
-                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="top" secondItem="CQn-cv-el2" secondAttribute="bottom" constant="20" id="bbJ-u6-HtF"/>
+                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="top" secondItem="CQn-cv-el2" secondAttribute="bottom" constant="7.5" id="bbJ-u6-HtF"/>
+                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="cuG-fb-QEh"/>
+                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="40" id="hc0-5m-ctL"/>
                                     <constraint firstItem="HdR-Uk-yVh" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="hiM-kM-UOW"/>
+                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="iCV-hM-kIO"/>
+                                    <constraint firstAttribute="trailing" secondItem="kEz-wG-Dej" secondAttribute="trailing" constant="20" id="nqU-Ih-8Xz"/>
+                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="pFb-cm-B78"/>
                                     <constraint firstItem="CKc-bc-YU2" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="pWi-2d-Pgo"/>
-                                    <constraint firstItem="HdR-Uk-yVh" firstAttribute="top" secondItem="xoS-Mb-Jyr" secondAttribute="bottom" constant="35.5" id="wuV-BU-rx1"/>
+                                    <constraint firstItem="HdR-Uk-yVh" firstAttribute="top" secondItem="xoS-Mb-Jyr" secondAttribute="bottom" constant="8" id="wuV-BU-rx1"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IxE-Jy-db5"/>
+                                        <exclude reference="pWi-2d-Pgo"/>
+                                        <exclude reference="HGg-Yd-aub"/>
+                                        <exclude reference="QZF-Tm-X9i"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -176,7 +286,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Final Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-mV-CGS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Final Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-mV-CGS">
                                 <rect key="frame" x="126" y="173" width="123.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -188,23 +298,39 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUi-oW-cRM">
-                                <rect key="frame" x="84" y="400" width="46" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUi-oW-cRM" customClass="SwiftyButton" customModule="SwiftyButton">
+                                <rect key="frame" x="77.5" y="400" width="60" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cF0-rt-kXH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Yes"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backToQuizScreen:" destination="4iP-AU-BBx" eventType="touchUpInside" id="6jH-Gd-aLh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1h-Gs-tDh">
-                                <rect key="frame" x="249" y="400" width="37" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1h-Gs-tDh" customClass="SwiftyButton" customModule="SwiftyButton">
+                                <rect key="frame" x="237" y="400" width="60" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1b5-PX-Un4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="No"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backToMainScreen:" destination="4iP-AU-BBx" eventType="touchUpInside" id="fe9-1p-3V5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-LG-iRo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-LG-iRo">
                                 <rect key="frame" x="138" y="224" width="98.5" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" red="0.89019607840000003" green="0.33333333329999998" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,7 +363,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hPj-a3-qu6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1NQ-Rh-6kv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="1NQ-Rh-6kv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHW-dd-C1V">
