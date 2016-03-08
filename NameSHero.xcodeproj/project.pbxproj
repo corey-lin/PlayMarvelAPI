@@ -23,6 +23,16 @@
 		044D534F1C890AE90053E416 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D534E1C890AE90053E416 /* Constants.swift */; };
 		044D53511C8916D70053E416 /* Swift-MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D53501C8916D70053E416 /* Swift-MD5.swift */; };
 		044D53551C8977E00053E416 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D53541C8977E00053E416 /* Kingfisher.framework */; };
+		04B0C0571C8E6BBE0017FD58 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C04D1C8E6BBE0017FD58 /* OpenSans-Bold.ttf */; };
+		04B0C0581C8E6BBE0017FD58 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C04E1C8E6BBE0017FD58 /* OpenSans-BoldItalic.ttf */; };
+		04B0C0591C8E6BBE0017FD58 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C04F1C8E6BBE0017FD58 /* OpenSans-ExtraBold.ttf */; };
+		04B0C05A1C8E6BBE0017FD58 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0501C8E6BBE0017FD58 /* OpenSans-ExtraBoldItalic.ttf */; };
+		04B0C05B1C8E6BBE0017FD58 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0511C8E6BBE0017FD58 /* OpenSans-Italic.ttf */; };
+		04B0C05C1C8E6BBE0017FD58 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0521C8E6BBE0017FD58 /* OpenSans-Light.ttf */; };
+		04B0C05D1C8E6BBE0017FD58 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0531C8E6BBE0017FD58 /* OpenSans-LightItalic.ttf */; };
+		04B0C05E1C8E6BBE0017FD58 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0541C8E6BBE0017FD58 /* OpenSans-Regular.ttf */; };
+		04B0C05F1C8E6BBE0017FD58 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0551C8E6BBE0017FD58 /* OpenSans-Semibold.ttf */; };
+		04B0C0601C8E6BBE0017FD58 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C0561C8E6BBE0017FD58 /* OpenSans-SemiboldItalic.ttf */; };
 		9649F9956616BA66855E908C /* Pods_NameSHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8C2B44993FD35EBBDC436C /* Pods_NameSHero.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +56,16 @@
 		044D53501C8916D70053E416 /* Swift-MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift-MD5.swift"; sourceTree = "<group>"; };
 		044D53531C89175F0053E416 /* NameSHero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NameSHero-Bridging-Header.h"; sourceTree = "<group>"; };
 		044D53541C8977E00053E416 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		04B0C04D1C8E6BBE0017FD58 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "fonts-open-sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		04B0C04E1C8E6BBE0017FD58 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "fonts-open-sans/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		04B0C04F1C8E6BBE0017FD58 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "fonts-open-sans/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		04B0C0501C8E6BBE0017FD58 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "fonts-open-sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		04B0C0511C8E6BBE0017FD58 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "fonts-open-sans/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		04B0C0521C8E6BBE0017FD58 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "fonts-open-sans/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		04B0C0531C8E6BBE0017FD58 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "fonts-open-sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		04B0C0541C8E6BBE0017FD58 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "fonts-open-sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		04B0C0551C8E6BBE0017FD58 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "fonts-open-sans/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		04B0C0561C8E6BBE0017FD58 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "fonts-open-sans/OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		052E28B4C746344F9E4F92D1 /* Pods-NameSHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NameSHero.release.xcconfig"; path = "Pods/Target Support Files/Pods-NameSHero/Pods-NameSHero.release.xcconfig"; sourceTree = "<group>"; };
 		56A278C3F307D7A3EA74D09C /* Pods-NameSHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NameSHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NameSHero/Pods-NameSHero.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8C2B44993FD35EBBDC436C /* Pods_NameSHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NameSHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +109,7 @@
 		044D532D1C8678400053E416 /* NameSHero */ = {
 			isa = PBXGroup;
 			children = (
+				04B0C04C1C8E6B970017FD58 /* Resource */,
 				044D53521C8916E10053E416 /* Util */,
 				044D532E1C8678400053E416 /* AppDelegate.swift */,
 				044D534E1C890AE90053E416 /* Constants.swift */,
@@ -133,6 +154,23 @@
 				044D53501C8916D70053E416 /* Swift-MD5.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		04B0C04C1C8E6B970017FD58 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				04B0C04D1C8E6BBE0017FD58 /* OpenSans-Bold.ttf */,
+				04B0C04E1C8E6BBE0017FD58 /* OpenSans-BoldItalic.ttf */,
+				04B0C04F1C8E6BBE0017FD58 /* OpenSans-ExtraBold.ttf */,
+				04B0C0501C8E6BBE0017FD58 /* OpenSans-ExtraBoldItalic.ttf */,
+				04B0C0511C8E6BBE0017FD58 /* OpenSans-Italic.ttf */,
+				04B0C0521C8E6BBE0017FD58 /* OpenSans-Light.ttf */,
+				04B0C0531C8E6BBE0017FD58 /* OpenSans-LightItalic.ttf */,
+				04B0C0541C8E6BBE0017FD58 /* OpenSans-Regular.ttf */,
+				04B0C0551C8E6BBE0017FD58 /* OpenSans-Semibold.ttf */,
+				04B0C0561C8E6BBE0017FD58 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		DB522C7A19EBB68F14FB2995 /* Pods */ = {
@@ -206,9 +244,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B0C05F1C8E6BBE0017FD58 /* OpenSans-Semibold.ttf in Resources */,
+				04B0C0601C8E6BBE0017FD58 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				044D53391C8678400053E416 /* LaunchScreen.storyboard in Resources */,
+				04B0C05E1C8E6BBE0017FD58 /* OpenSans-Regular.ttf in Resources */,
+				04B0C05B1C8E6BBE0017FD58 /* OpenSans-Italic.ttf in Resources */,
+				04B0C05A1C8E6BBE0017FD58 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				044D53361C8678400053E416 /* Assets.xcassets in Resources */,
+				04B0C05D1C8E6BBE0017FD58 /* OpenSans-LightItalic.ttf in Resources */,
+				04B0C0571C8E6BBE0017FD58 /* OpenSans-Bold.ttf in Resources */,
 				044D53341C8678400053E416 /* Main.storyboard in Resources */,
+				04B0C05C1C8E6BBE0017FD58 /* OpenSans-Light.ttf in Resources */,
+				04B0C0581C8E6BBE0017FD58 /* OpenSans-BoldItalic.ttf in Resources */,
+				04B0C0591C8E6BBE0017FD58 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
