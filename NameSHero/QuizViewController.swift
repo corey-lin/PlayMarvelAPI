@@ -30,13 +30,12 @@ class QuizViewController: UIViewController {
       if let choices = $0 {
         for index in 0..<choices.count {
           self.choiceButtons[index].setTitle(choices[index], forState: UIControlState.Normal)
-          self.choiceButtons[index].sizeToFit()
         }
       }
     }
     viewModel.numberOfQuests.producer.startWithNext {
       if $0 > 0 {
-        let score = $0 - 1
+        let score = ($0 - 1) * 10
         self.scoreLabel.text = "Score:\(score)"
       }
     }
@@ -61,7 +60,7 @@ class QuizViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "toResult" {
       let resultVC = segue.destinationViewController as! ResultViewController
-      let vm = ResultViewModel(viewModel.numberOfQuests.value)
+      let vm = ResultViewModel((viewModel.numberOfQuests.value - 1) * 10)
       resultVC.bindViewModel(vm)
     }
   }

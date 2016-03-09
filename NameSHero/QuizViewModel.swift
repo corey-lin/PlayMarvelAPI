@@ -53,7 +53,7 @@ class QuizViewModel {
     quizViewStateInfo = MutableProperty<QuizViewStateInfo>(QuizViewStateInfo())
 
     numberOfQuests.producer.startWithNext {
-      if 0 < $0 && $0 <= 50 {
+      if 0 < $0 && $0 <= 10 {
         self.generateQuest()
       }
     }
@@ -64,8 +64,8 @@ class QuizViewModel {
     let privateKey = Constants.MarvelAPIPrivateKey
     let ts = NSDate().timeIntervalSince1970.description
     let hash = "\(ts)\(privateKey)\(publicKey)".md5()
-    let limit = 80
-    let offset = pickRandomNumber(Constants.TotalOfHeroes-limit)
+    let limit = 20
+    let offset = pickRandomNumber(Constants.TotalOfHeroes - limit)
 
     Alamofire.request(.GET, Constants.MarvelAPIURL + "/characters",
       parameters:
@@ -75,10 +75,10 @@ class QuizViewModel {
         "offset" : offset,
         "limit": limit])
       .responseJSON { response in
-        print(response.request)  // original URL request
-        print(response.response) // URL response
-        print(response.data)     // server data
-        print(response.result)   // result of response serialization
+//        print(response.request)  // original URL request
+//        print(response.response) // URL response
+//        print(response.data)     // server data
+//        print(response.result)   // result of response serialization
 
         guard let JSON = response.result.value,
           let data = JSON["data"] as? [String: AnyObject],
@@ -89,28 +89,42 @@ class QuizViewModel {
             return
           }
         let count: Int = data["count"] as! Int
+        var namesArray = [String]()
         for idx in 0..<count {
           let character = results[idx] as! [String: AnyObject]
           let thumbnail = character["thumbnail"] as! [String: AnyObject]
-          print(character["name"])
-          print(character["id"])
+          let characterId = character["id"] as! Int
+          let characterName = character["name"] as! String
           var imageURL: String = thumbnail["path"] as! String
-          if imageURL.containsString("image_not_available") == false {
+          if !imageURL.containsString("image_not_available") &&
+            !characterName.containsString("(") &&
+            !self.containsName(namesArray, other: character["name"] as! String) {
             imageURL += "/standard_fantastic.jpg"
-            print(imageURL)
-            self.heroes.append(Hero(id: character["id"] as! Int, name: character["name"] as! String, pictureURL: imageURL))
+            namesArray.append(character["name"] as! String)
+            self.heroes.append(Hero(id: characterId, name: characterName, pictureURL: imageURL))
           }
         }
-        print(self.heroes)
         self.numberOfQuests.value = 1;
       }
     let nextStateInfo = QuizViewStateInfo(current: QuizViewState.Loading, previous: quizViewStateInfo.value.curState)
     quizViewStateInfo.value = nextStateInfo
   }
 
+  func containsName(names: [String], other: String) -> Bool {
+    for n in names {
+      if n.containsString(other) {
+        return true
+      }
+    }
+    return false
+  }
+
+  func containsParenthesis(name: String) -> Bool {
+    return name.containsString("(")
+  }
+
   func resetQuiz() {
     heroes = [Hero]()
-    //numberOfQuests.value = 0
     let nextStateInfo = QuizViewStateInfo(current: QuizViewState.Init, previous: quizViewStateInfo.value.curState)
     quizViewStateInfo.value = nextStateInfo
   }
@@ -139,7 +153,7 @@ class QuizViewModel {
     namesToSelect.append(self.heroes[rand1].name)
     namesToSelect.append(self.heroes[rand2].name)
     namesToSelect.append(self.heroes[rand3].name)
-
+    print(self.questHero!.name)
     let locationForAnswer = pickRandomNumber(namesToSelect.count+1)
     namesToSelect.insert(self.questHero!.name, atIndex: locationForAnswer)
     print(namesToSelect)
@@ -151,8 +165,9 @@ class QuizViewModel {
   private func pickRandomNumber(range:  Int, filterNumbers: Int...) -> Int {
     var rand = Int(arc4random_uniform(UInt32(range)))
     while(checkValueIncludedInNumbers(rand, numbers: filterNumbers) == true) {
-      rand = Int(arc4random_uniform(UInt32(self.heroes.count)))
+      rand = Int(arc4random_uniform(UInt32(range)))
     }
+    print("rand = \(rand)")
     return rand
   }
 
