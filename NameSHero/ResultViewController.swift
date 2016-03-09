@@ -7,20 +7,52 @@
 //
 
 import UIKit
+import Twinkle
+import Shimmer
 
 class ResultViewController: UIViewController {
   @IBOutlet weak var finalScoreLabel: UILabel!
+  @IBOutlet weak var perfectScoreLabel: UILabel!
+  @IBOutlet weak var newRecordLabel: UILabel!
+
+  var timer: NSTimer?
   var viewModel = ResultViewModel()
 
   override func viewDidLoad() {
+    timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("twinkleLabels"), userInfo: nil, repeats: true)
     viewModel.finalScore.producer.startWithNext {
       score in
       self.finalScoreLabel.text = "\(score)"
-      let recordScore: Int = NSUserDefaults.standardUserDefaults().integerForKey(Constants.RecordScoreKey)
-      if recordScore < score {
-        NSUserDefaults.standardUserDefaults().setInteger(score, forKey: Constants.RecordScoreKey)
+    }
+    viewModel.newRecordScore.producer.startWithNext {
+      newRecord in
+      if newRecord {
+        self.newRecordLabel.hidden = false
+      } else {
+        self.newRecordLabel.hidden = true
       }
     }
+    viewModel.perfectScore.producer.startWithNext {
+      perfect in
+      if perfect {
+        self.perfectScoreLabel.hidden = false
+      } else {
+        self.perfectScoreLabel.hidden = true
+      }
+    }
+    let shimmeringView = FBShimmeringView(frame: self.finalScoreLabel.frame)
+    self.view.addSubview(shimmeringView)
+    shimmeringView.contentView = self.finalScoreLabel
+    shimmeringView.shimmering = true
+  }
+
+  func twinkleLabels() {
+    self.newRecordLabel.twinkle()
+    self.perfectScoreLabel.twinkle()
+  }
+  
+  deinit {
+    timer?.invalidate()
   }
 
   @IBAction func backToMainScreen(sender: AnyObject) {

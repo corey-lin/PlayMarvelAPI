@@ -4,5 +4,7 @@
 
 target 'NameSHero' do
 pod 'SwiftyButton/CustomContent'
+pod 'Twinkle'
+pod 'Shimmer'
 end
 

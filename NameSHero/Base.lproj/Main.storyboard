@@ -21,6 +21,10 @@
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
         </mutableArray>
+        <mutableArray key="OpenSans-LightItalic.ttf">
+            <string>OpenSansLight-Italic</string>
+            <string>OpenSansLight-Italic</string>
+        </mutableArray>
         <mutableArray key="OpenSans-SemiboldItalic.ttf">
             <string>OpenSans-SemiboldItalic</string>
             <string>OpenSans-SemiboldItalic</string>
@@ -346,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play again?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c28-HC-rZQ">
-                                <rect key="frame" x="136.5" y="319" width="102.5" height="29"/>
+                                <rect key="frame" x="136" y="319" width="102.5" height="29"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -399,10 +403,22 @@
                                     <action selector="backToMainScreen:" destination="4iP-AU-BBx" eventType="touchUpInside" id="fe9-1p-3V5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-LG-iRo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-LG-iRo">
                                 <rect key="frame" x="153" y="187" width="68" height="56"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiboldItalic" family="Open Sans" pointSize="41"/>
                                 <color key="textColor" red="0.89019607840000003" green="0.33333333329999998" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Record!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwX-k4-fHl">
+                                <rect key="frame" x="229" y="195" width="62.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.12156862745098039" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect Score!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvf-sQ-MxV">
+                                <rect key="frame" x="226" y="218" width="68" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.12156862745098039" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -411,14 +427,19 @@
                             <constraint firstItem="M30-LG-iRo" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="31" id="0c3-vt-2lY"/>
                             <constraint firstItem="BUi-oW-cRM" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="207" id="3As-DX-XIt"/>
                             <constraint firstItem="BUi-oW-cRM" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" constant="52" id="721-Mo-Phq"/>
+                            <constraint firstItem="Dvf-sQ-MxV" firstAttribute="centerX" secondItem="NwX-k4-fHl" secondAttribute="centerX" id="BbK-GP-EMq"/>
                             <constraint firstItem="Wbd-mV-CGS" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="HoR-s5-zY9"/>
                             <constraint firstItem="BUi-oW-cRM" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="JIp-b3-2U9"/>
+                            <constraint firstItem="Dvf-sQ-MxV" firstAttribute="top" secondItem="NwX-k4-fHl" secondAttribute="bottom" constant="5" id="LwW-al-4LU"/>
                             <constraint firstItem="Wbd-mV-CGS" firstAttribute="top" secondItem="Sm3-vV-7gJ" secondAttribute="bottom" constant="109" id="NgY-eA-qqW"/>
+                            <constraint firstItem="NwX-k4-fHl" firstAttribute="leading" secondItem="M30-LG-iRo" secondAttribute="trailing" constant="8" id="PnU-Qt-8zM"/>
                             <constraint firstItem="c28-HC-rZQ" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" id="Rfe-K8-Ho1"/>
                             <constraint firstItem="M30-LG-iRo" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="30.5" id="Sb8-BM-KiP"/>
                             <constraint firstItem="c28-HC-rZQ" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="TbB-1V-lpW"/>
                             <constraint firstItem="a1h-Gs-tDh" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" constant="80" id="VAr-qS-4KF"/>
+                            <constraint firstItem="Dvf-sQ-MxV" firstAttribute="top" secondItem="NwX-k4-fHl" secondAttribute="bottom" constant="6.5" id="WDH-jL-taA"/>
                             <constraint firstItem="a1h-Gs-tDh" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="207" id="XgE-GW-gaW"/>
+                            <constraint firstItem="c28-HC-rZQ" firstAttribute="top" secondItem="Dvf-sQ-MxV" secondAttribute="bottom" constant="84.5" id="Zr5-fH-GfN"/>
                             <constraint firstItem="a1h-Gs-tDh" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" constant="52" id="d04-G7-m15"/>
                             <constraint firstItem="M30-LG-iRo" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="dwl-5l-eur"/>
                             <constraint firstItem="BUi-oW-cRM" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" constant="-80" id="nAa-pY-RQf"/>
@@ -428,6 +449,7 @@
                             <mask key="constraints">
                                 <exclude reference="NgY-eA-qqW"/>
                                 <exclude reference="0c3-vt-2lY"/>
+                                <exclude reference="LwW-al-4LU"/>
                                 <exclude reference="3As-DX-XIt"/>
                                 <exclude reference="JIp-b3-2U9"/>
                                 <exclude reference="XgE-GW-gaW"/>
@@ -437,6 +459,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="finalScoreLabel" destination="M30-LG-iRo" id="OaM-e3-bDS"/>
+                        <outlet property="newRecordLabel" destination="NwX-k4-fHl" id="3xu-xe-U8t"/>
+                        <outlet property="perfectScoreLabel" destination="Dvf-sQ-MxV" id="6Ra-fd-dvc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLE-6F-cGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
