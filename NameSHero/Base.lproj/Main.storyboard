@@ -3,8 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Self referencing constraints of the same attribute" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-ExtraBold.ttf">
@@ -111,10 +112,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
-                                        <rect key="frame" x="40" y="59" width="295" height="295"/>
+                                        <rect key="frame" x="40" y="59" width="295" height="233.5"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" secondItem="xoS-Mb-Jyr" secondAttribute="height" multiplier="1:1" id="A0f-8R-R80"/>
                                             <constraint firstAttribute="width" constant="263" id="NKh-V2-2zC"/>
-                                            <constraint firstAttribute="width" secondItem="xoS-Mb-Jyr" secondAttribute="height" multiplier="1:1" id="SPL-vU-cXc"/>
                                             <constraint firstAttribute="height" constant="216" id="UYm-Te-fH1"/>
                                         </constraints>
                                         <variation key="default">
@@ -124,161 +125,182 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-cv-el2">
-                                        <rect key="frame" x="310.5" y="28" width="56" height="23.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-cv-el2">
+                                        <rect key="frame" x="310" y="28" width="56" height="23.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-SemiboldItalic" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" red="0.74117647058823533" green="0.55294117647058827" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp" customClass="SwiftyButton" customModule="SwiftyButton">
-                                        <rect key="frame" x="20" y="410" width="335" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="w4e-BF-i8D"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
-                                        <state key="normal" title="Spider Man">
-                                            <color key="titleColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                                <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="dng-SZ-Zsv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2" customClass="SwiftyButton" customModule="SwiftyButton">
-                                        <rect key="frame" x="20" y="473" width="335" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="bfy-Wa-iTa"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
-                                        <state key="normal" title=" X-Man">
-                                            <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                                <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="MTD-cA-gR5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er" customClass="SwiftyButton" customModule="SwiftyButton">
-                                        <rect key="frame" x="20" y="599" width="335" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="xr8-Yl-epn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
-                                        <state key="normal" title=" Hulk">
-                                            <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                                <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="LtN-qV-sOm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej" customClass="SwiftyButton" customModule="SwiftyButton">
-                                        <rect key="frame" x="20" y="533" width="335" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="iek-Zg-P0T"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
-                                        <state key="normal" title="Thor">
-                                            <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                                <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="p5X-Qa-6Ao"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-Uk-yVh">
-                                        <rect key="frame" x="94" y="362" width="186.5" height="23.5"/>
+                                        <rect key="frame" x="94" y="300.5" width="186.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" red="0.74117647058823533" green="0.55294117647058827" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0aR-Pl-8Oz" userLabel="Buttons View">
+                                        <rect key="frame" x="20" y="335.5" width="335" height="311.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-YZ-hRp" customClass="SwiftyButton" customModule="SwiftyButton">
+                                                <rect key="frame" x="0.0" y="5" width="335" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="w4e-BF-i8D"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
+                                                <state key="normal" title="Spider Man">
+                                                    <color key="titleColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                        <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="dng-SZ-Zsv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-ch-1Er" customClass="SwiftyButton" customModule="SwiftyButton">
+                                                <rect key="frame" x="0.0" y="179.5" width="335" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="xr8-Yl-epn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
+                                                <state key="normal" title=" Hulk">
+                                                    <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                        <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="LtN-qV-sOm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-wG-Dej" customClass="SwiftyButton" customModule="SwiftyButton">
+                                                <rect key="frame" x="0.0" y="267.5" width="335" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="iek-Zg-P0T"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
+                                                <state key="normal" title="Thor">
+                                                    <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                        <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="p5X-Qa-6Ao"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-bc-YU2" customClass="SwiftyButton" customModule="SwiftyButton">
+                                                <rect key="frame" x="0.0" y="92" width="335" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="bfy-Wa-iTa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
+                                                <state key="normal" title=" X-Man">
+                                                    <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                        <color key="value" red="0.72549019607843135" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.29803921568627451" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectButtonPressed:" destination="RBe-Cy-bFZ" eventType="touchUpInside" id="MTD-cA-gR5"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3N-Av-r2I" userLabel="Space1">
+                                                <rect key="frame" x="0.0" y="49" width="335" height="43.5"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgd-3N-cxS" userLabel="Space2">
+                                                <rect key="frame" x="0.0" y="136" width="335" height="43.5"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-75-pWM" userLabel="Space3">
+                                                <rect key="frame" x="0.0" y="223.5" width="335" height="43.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="kEz-wG-Dej" secondAttribute="bottom" id="3UU-ZQ-prH"/>
+                                            <constraint firstAttribute="trailing" secondItem="hNg-YZ-hRp" secondAttribute="trailing" id="55P-FU-vXg"/>
+                                            <constraint firstItem="Vgd-3N-cxS" firstAttribute="height" secondItem="T3N-Av-r2I" secondAttribute="height" id="7kL-DK-Qlv"/>
+                                            <constraint firstItem="TnA-75-pWM" firstAttribute="top" secondItem="3Zc-ch-1Er" secondAttribute="bottom" id="8EZ-aF-brG"/>
+                                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="leading" secondItem="0aR-Pl-8Oz" secondAttribute="leading" id="A2H-o9-X6w"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Zc-ch-1Er" secondAttribute="trailing" id="CF5-uf-hmR"/>
+                                            <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="T3N-Av-r2I" secondAttribute="bottom" id="Cfs-Wv-ULy"/>
+                                            <constraint firstAttribute="trailing" secondItem="kEz-wG-Dej" secondAttribute="trailing" id="DcA-NS-fxH"/>
+                                            <constraint firstItem="T3N-Av-r2I" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" id="E9r-mf-RjC"/>
+                                            <constraint firstItem="CKc-bc-YU2" firstAttribute="leading" secondItem="0aR-Pl-8Oz" secondAttribute="leading" id="EOb-8y-fKN"/>
+                                            <constraint firstItem="T3N-Av-r2I" firstAttribute="centerX" secondItem="0aR-Pl-8Oz" secondAttribute="centerX" id="GOh-az-sv2"/>
+                                            <constraint firstItem="Vgd-3N-cxS" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" id="LJD-TF-6B8"/>
+                                            <constraint firstItem="TnA-75-pWM" firstAttribute="centerX" secondItem="0aR-Pl-8Oz" secondAttribute="centerX" id="NCC-3a-0Dd"/>
+                                            <constraint firstAttribute="trailing" secondItem="CKc-bc-YU2" secondAttribute="trailing" id="NWk-D3-RDP"/>
+                                            <constraint firstItem="T3N-Av-r2I" firstAttribute="width" secondItem="hNg-YZ-hRp" secondAttribute="width" id="OKO-vM-uXw"/>
+                                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="leading" secondItem="0aR-Pl-8Oz" secondAttribute="leading" id="PvV-L2-gBr"/>
+                                            <constraint firstItem="TnA-75-pWM" firstAttribute="height" secondItem="T3N-Av-r2I" secondAttribute="height" id="WfA-8a-jPZ"/>
+                                            <constraint firstItem="TnA-75-pWM" firstAttribute="width" secondItem="hNg-YZ-hRp" secondAttribute="width" id="cJ4-ZV-hgD"/>
+                                            <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="TnA-75-pWM" secondAttribute="bottom" id="lY5-cH-0z9"/>
+                                            <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="Vgd-3N-cxS" secondAttribute="bottom" id="loW-sW-6by"/>
+                                            <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="0aR-Pl-8Oz" secondAttribute="top" constant="5" id="nay-ob-D6l"/>
+                                            <constraint firstItem="Vgd-3N-cxS" firstAttribute="width" secondItem="hNg-YZ-hRp" secondAttribute="width" id="s2H-v9-Bii"/>
+                                            <constraint firstItem="Vgd-3N-cxS" firstAttribute="centerX" secondItem="0aR-Pl-8Oz" secondAttribute="centerX" id="vch-gi-6WP"/>
+                                            <constraint firstItem="kEz-wG-Dej" firstAttribute="leading" secondItem="0aR-Pl-8Oz" secondAttribute="leading" id="wje-N8-hPL"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="top" secondItem="CKc-bc-YU2" secondAttribute="bottom" constant="20" id="1DV-eq-i8C"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Zc-ch-1Er" secondAttribute="trailing" constant="20" id="1xy-Vw-uBt"/>
-                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="2eA-iD-FVD"/>
-                                    <constraint firstAttribute="trailing" secondItem="CKc-bc-YU2" secondAttribute="trailing" constant="20" id="B67-9y-Qz2"/>
-                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="top" secondItem="hNg-YZ-hRp" secondAttribute="bottom" constant="23" id="GQj-4G-dvU"/>
-                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="HGg-Yd-aub"/>
-                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="IxE-Jy-db5"/>
-                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="24.5" id="KTS-RV-CmD"/>
+                                    <constraint firstItem="xoS-Mb-Jyr" firstAttribute="height" secondItem="8ZJ-Xq-tIH" secondAttribute="height" multiplier="0.35" id="1RL-nJ-CP0"/>
+                                    <constraint firstAttribute="trailing" secondItem="0aR-Pl-8Oz" secondAttribute="trailing" constant="20" id="MNT-dj-ID4"/>
                                     <constraint firstItem="CQn-cv-el2" firstAttribute="top" secondItem="8ZJ-Xq-tIH" secondAttribute="top" constant="28" id="OS4-y7-hYC"/>
-                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="QZF-Tm-X9i"/>
-                                    <constraint firstAttribute="trailing" secondItem="hNg-YZ-hRp" secondAttribute="trailing" constant="20" id="Qvk-Dh-KaV"/>
                                     <constraint firstAttribute="trailing" secondItem="xoS-Mb-Jyr" secondAttribute="trailing" constant="40" id="XAf-UZ-vi9"/>
-                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="top" secondItem="kEz-wG-Dej" secondAttribute="bottom" constant="26" id="XRu-wD-HV1"/>
                                     <constraint firstAttribute="trailing" secondItem="CQn-cv-el2" secondAttribute="trailing" constant="8.5" id="aAU-cz-O0G"/>
                                     <constraint firstItem="xoS-Mb-Jyr" firstAttribute="top" secondItem="CQn-cv-el2" secondAttribute="bottom" constant="7.5" id="bbJ-u6-HtF"/>
-                                    <constraint firstItem="hNg-YZ-hRp" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="cuG-fb-QEh"/>
                                     <constraint firstItem="xoS-Mb-Jyr" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="40" id="hc0-5m-ctL"/>
                                     <constraint firstItem="HdR-Uk-yVh" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="hiM-kM-UOW"/>
-                                    <constraint firstItem="3Zc-ch-1Er" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="iCV-hM-kIO"/>
-                                    <constraint firstAttribute="trailing" secondItem="kEz-wG-Dej" secondAttribute="trailing" constant="20" id="nqU-Ih-8Xz"/>
-                                    <constraint firstItem="kEz-wG-Dej" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="pFb-cm-B78"/>
-                                    <constraint firstItem="CKc-bc-YU2" firstAttribute="centerX" secondItem="8ZJ-Xq-tIH" secondAttribute="centerX" id="pWi-2d-Pgo"/>
+                                    <constraint firstItem="0aR-Pl-8Oz" firstAttribute="leading" secondItem="8ZJ-Xq-tIH" secondAttribute="leading" constant="20" id="kcx-s5-Jgm"/>
+                                    <constraint firstAttribute="bottom" secondItem="0aR-Pl-8Oz" secondAttribute="bottom" constant="20" id="scN-gT-G1J"/>
+                                    <constraint firstItem="0aR-Pl-8Oz" firstAttribute="top" secondItem="HdR-Uk-yVh" secondAttribute="bottom" constant="11.5" id="taW-FI-wBa"/>
                                     <constraint firstItem="HdR-Uk-yVh" firstAttribute="top" secondItem="xoS-Mb-Jyr" secondAttribute="bottom" constant="8" id="wuV-BU-rx1"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="IxE-Jy-db5"/>
-                                        <exclude reference="pWi-2d-Pgo"/>
-                                        <exclude reference="HGg-Yd-aub"/>
-                                        <exclude reference="QZF-Tm-X9i"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -388,15 +410,29 @@
                         <constraints>
                             <constraint firstItem="M30-LG-iRo" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="31" id="0c3-vt-2lY"/>
                             <constraint firstItem="BUi-oW-cRM" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="207" id="3As-DX-XIt"/>
+                            <constraint firstItem="BUi-oW-cRM" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" constant="52" id="721-Mo-Phq"/>
                             <constraint firstItem="Wbd-mV-CGS" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="HoR-s5-zY9"/>
+                            <constraint firstItem="BUi-oW-cRM" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="JIp-b3-2U9"/>
                             <constraint firstItem="Wbd-mV-CGS" firstAttribute="top" secondItem="Sm3-vV-7gJ" secondAttribute="bottom" constant="109" id="NgY-eA-qqW"/>
                             <constraint firstItem="c28-HC-rZQ" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" id="Rfe-K8-Ho1"/>
+                            <constraint firstItem="M30-LG-iRo" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="30.5" id="Sb8-BM-KiP"/>
                             <constraint firstItem="c28-HC-rZQ" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="TbB-1V-lpW"/>
                             <constraint firstItem="a1h-Gs-tDh" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" constant="80" id="VAr-qS-4KF"/>
                             <constraint firstItem="a1h-Gs-tDh" firstAttribute="top" secondItem="Wbd-mV-CGS" secondAttribute="bottom" constant="207" id="XgE-GW-gaW"/>
+                            <constraint firstItem="a1h-Gs-tDh" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" constant="52" id="d04-G7-m15"/>
                             <constraint firstItem="M30-LG-iRo" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" id="dwl-5l-eur"/>
                             <constraint firstItem="BUi-oW-cRM" firstAttribute="centerX" secondItem="dil-Sn-wHP" secondAttribute="centerX" constant="-80" id="nAa-pY-RQf"/>
+                            <constraint firstItem="M30-LG-iRo" firstAttribute="centerY" secondItem="dil-Sn-wHP" secondAttribute="centerY" constant="-118" id="wJv-DQ-rAy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NgY-eA-qqW"/>
+                                <exclude reference="0c3-vt-2lY"/>
+                                <exclude reference="3As-DX-XIt"/>
+                                <exclude reference="JIp-b3-2U9"/>
+                                <exclude reference="XgE-GW-gaW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
