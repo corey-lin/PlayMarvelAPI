@@ -9,6 +9,7 @@ import UIKit
 //import ReactiveCocoa
 import Kingfisher
 import SwiftSpinner
+import TAOverlay
 
 class QuizViewController: UIViewController {
   @IBOutlet weak var scoreLabel: UILabel!
@@ -48,6 +49,23 @@ class QuizViewController: UIViewController {
       } else if $0.curState == QuizViewState.UserPlay {
         SwiftSpinner.hide()
         self.quizPlayView.hidden = false
+      }
+    }
+    viewModel.notifyAnswerCorrect.producer.startWithNext {
+      if $0 && self.viewModel.numberOfQuests.value > 0 {
+        TAOverlay.showOverlayWithLabel(nil, options:[
+          TAOverlayOptions.OverlayTypeSuccess,
+          TAOverlayOptions.AutoHide,
+          TAOverlayOptions.OverlaySizeFullScreen])
+      }
+    }
+    viewModel.notifyAnswerWrong.producer.startWithNext {
+      if $0 && self.viewModel.numberOfQuests.value > 0 {
+        TAOverlay.showOverlayWithLabel(nil, options:[
+          TAOverlayOptions.OverlayTypeError,
+          TAOverlayOptions.AutoHide,
+          TAOverlayOptions.OverlaySizeFullScreen
+        ])
       }
     }
   }

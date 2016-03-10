@@ -6,5 +6,6 @@ target 'NameSHero' do
 pod 'SwiftyButton/CustomContent'
 pod 'Twinkle'
 pod 'Shimmer'
+pod 'TAOverlay'
 end
 

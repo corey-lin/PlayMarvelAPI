@@ -45,6 +45,8 @@ class QuizViewModel {
   let choices: MutableProperty<[String]?>
   let numberOfQuests: MutableProperty<Int>
   let quizViewStateInfo: MutableProperty<QuizViewStateInfo>
+  let notifyAnswerCorrect = MutableProperty<Bool>(false)
+  let notifyAnswerWrong = MutableProperty<Bool>(false)
 
   init() {
     pictureURL = MutableProperty<NSURL?>(nil)
@@ -132,9 +134,11 @@ class QuizViewModel {
   func checkAnswer(userAnswer: String?) {
     if questHero?.name == userAnswer {
       print("Bingo")
+      self.notifyAnswerCorrect.value = true
       self.numberOfQuests.value++
     } else {
       print("Game Over")
+      self.notifyAnswerWrong.value = true
       let nextStateInfo = QuizViewStateInfo(current: QuizViewState.GameOver, previous: quizViewStateInfo.value.curState)
       quizViewStateInfo.value = nextStateInfo
     }
