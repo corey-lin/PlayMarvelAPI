@@ -115,7 +115,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZJ-Xq-tIH" userLabel="QuizView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spider-Man" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-Mb-Jyr">
                                         <rect key="frame" x="40" y="59" width="295" height="233.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" secondItem="xoS-Mb-Jyr" secondAttribute="height" multiplier="1:1" id="A0f-8R-R80"/>
@@ -497,6 +497,6 @@
     </scenes>
     <resources>
         <image name="Main-screen-background" width="1177" height="859"/>
-        <image name="Spider-Man" width="135" height="135"/>
+        <image name="character" width="135" height="135"/>
     </resources>
 </document>

@@ -16,7 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mark" translatesAutoresizingMaskIntoConstraints="NO" id="wOP-uo-WNH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="D1a-K2-R7H"/>
+                                    <constraint firstAttribute="height" constant="256" id="JkL-Oe-dUQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D1a-K2-R7H"/>
+                                        <exclude reference="JkL-Oe-dUQ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wOP-uo-WNH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="472-eg-xDT"/>
+                            <constraint firstItem="wOP-uo-WNH" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Dmw-yc-Izw"/>
+                            <constraint firstItem="wOP-uo-WNH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ndb-Ie-RZ8"/>
+                            <constraint firstItem="wOP-uo-WNH" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="cth-yy-tWI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +45,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mark" width="512" height="512"/>
+    </resources>
 </document>
