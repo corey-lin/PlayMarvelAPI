@@ -66,7 +66,7 @@ class QuizViewModel {
     let privateKey = Constants.MarvelAPIPrivateKey
     let ts = NSDate().timeIntervalSince1970.description
     let hash = "\(ts)\(privateKey)\(publicKey)".md5()
-    let limit = 20
+    let limit = 40
     let offset = pickRandomNumber(Constants.TotalOfHeroes - limit)
 
     Alamofire.request(.GET, Constants.MarvelAPIURL + "/characters",
@@ -150,6 +150,11 @@ class QuizViewModel {
     self.heroes.removeAtIndex(answerHeroIndex)
     pictureURL.value = NSURL(string: self.questHero!.pictureURL)
 
+    if self.heroes.count < 3 {
+      print("heroes.count is less than 3")
+      self.resetQuiz()
+      self.fetchCharacterPicture()
+    }
     let rand1 = pickRandomNumber(self.heroes.count)
     let rand2 = pickRandomNumber(self.heroes.count, filterNumbers: rand1)
     let rand3 = pickRandomNumber(self.heroes.count, filterNumbers: rand1, rand2)

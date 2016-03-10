@@ -14,6 +14,7 @@ class ResultViewController: UIViewController {
   @IBOutlet weak var finalScoreLabel: UILabel!
   @IBOutlet weak var perfectScoreLabel: UILabel!
   @IBOutlet weak var newRecordLabel: UILabel!
+  @IBOutlet weak var finalScoreView: FBShimmeringView!
 
   var timer: NSTimer?
   var viewModel = ResultViewModel()
@@ -40,10 +41,8 @@ class ResultViewController: UIViewController {
         self.perfectScoreLabel.hidden = true
       }
     }
-    let shimmeringView = FBShimmeringView(frame: self.finalScoreLabel.frame)
-    self.view.addSubview(shimmeringView)
-    shimmeringView.contentView = self.finalScoreLabel
-    shimmeringView.shimmering = true
+    finalScoreView.contentView = finalScoreLabel
+    finalScoreView.shimmering = true
   }
 
   func twinkleLabels() {

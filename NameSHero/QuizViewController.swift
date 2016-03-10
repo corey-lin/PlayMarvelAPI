@@ -38,6 +38,9 @@ class QuizViewController: UIViewController {
       if $0 > 0 {
         let score = ($0 - 1) * 10
         self.scoreLabel.text = "Score:\(score)"
+        if score == 100 {
+          self.performSegueWithIdentifier("toResult", sender: nil)
+        }
       }
     }
     viewModel.quizViewStateInfo.producer.startWithNext {
